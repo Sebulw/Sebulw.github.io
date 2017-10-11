@@ -8,7 +8,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'workspace/css/style.css': 'workspace/sass/style.sass'
+          'css/style.css': 'sass/style.sass'
         }
       }
     },
@@ -17,7 +17,7 @@ module.exports = function(grunt) {
       dynamic: {
         files: [{
           expand: true,
-          cwd: 'workspace/images/',
+          cwd: 'images/',
           src: ['**/*.{png,jpg,gif}'],
           dest: 'build/'
         }]
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 
     watch: {
       scripts: {
-          files: ['workspace/sass/style.sass', 'workspace/css/style.css'],
+          files: ['sass/style.sass', 'css/style.css'],
           tasks: ['sass'],
           options: {
               spawn: false,
@@ -36,18 +36,18 @@ module.exports = function(grunt) {
 
     browserSync: {
         bsFiles: {
-            src : ['workspace/index.html', 'workspace/sass/style.sass', 'workspace/css/style.css', 'workspace/js/scripts.js']
+            src : ['index.html', 'sass/style.sass', 'css/style.css', 'js/scripts.js']
         },
         options: {
             server: {
-                baseDir: ["workspace/sass/", "workspace/", "workspace/css/", "workspace/js/"]
+                baseDir: ["sass/", "css/", "js/"]
             },
             watchTask: true
         }
     },
 
     jshint: {
-      all: ['workspace/js/*.js']
+      all: ['js/*.js']
     }
   });
   // Load the plugins tasks
