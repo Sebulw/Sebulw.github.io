@@ -1,49 +1,125 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600&subset=latin-ext')
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light')
+@import url('https://fonts.googleapis.com/css?family=Modak&subset=latin-ext')
 body
-	background-color: #55ACEE
-	font-family: 'Raleway', sans-serif
-main
-	max-width: 1200px
-	margin: 0 auto
-	color: #FFF
-	header
-		text-align: center
-		margin: 100px
-		h1
-			font-size: 45px
-			font-weight: 400
-			line-height: 45px
-			letter-spacing: 3px
-	.box
-		text-align: center
-		margin: 30px
-		.quote
-			font-size: 25px
-			letter-spacing: 2px
-			font-weight: 400
-			padding: 30px
-		.author
-			font-size: 20px
-			letter-spacing: 1px
-			padding: 15px
-	.buttons
-		.tweet, .trigger
-			width: 250px
-			height: 50px
-			margin: 20px auto
-			display: block
-			background-color: #008aed
-			color: #FFF
-			text-align: center
-			border: 1px solid #FFF
-			border-radius: 3px
-			font-size: 28px
-			&:hover
-				background-color: #237bba
-				transform: scale(1.05)
-				transition: .2s
-		i
-			color: #FFF
-		.tweet, .fa-twitter
-			padding-top: 5px
-			letter-spacing: 2px
+  margin: 0 auto
+  max-width: 1200px
+  background-image: url('https://static.pexels.com/photos/268415/pexels-photo-268415.jpeg')
+  font-family: 'Shadows Into Light', cursive
+*
+  box-sizing: border-box
+  
+
+.ui-sortable 
+  min-height: 80px
+
+.btn-delete 
+  position: absolute
+  right: 0
+  top: 0
+  width: 25px
+  height: 25px
+  border: 0
+  background-color: rgba(219, 72, 72, 0.7)
+  color: #FFF
+  border-radius: 0 10px 0 0
+  font-size: 18px
+  &:hover
+    background-color: rgba(239, 21, 21, 0.8)
+    cursor: pointer
+    box-shadow: 1px 1px 5px #FFF
+
+/* BOARD */
+.board 
+  h1 
+    text-align: center
+    font-size: 45px
+  .header-container
+    position: relative
+    min-height: 200px
+    .create-column
+      position: absolute
+      left: 600px
+      width: 180px
+      height: 35px
+      border-radius: 10px
+      font-size: 22px
+      font-family: 'Modak', cursive
+      background-color: rgba(23, 211, 86, 0.7)
+      cursor: pointer
+      border-style: none
+      box-shadow: 2px 2px 5px #000
+      &:hover
+        background-color: rgba(6, 226, 116, 0.8)
+        box-shadow: 2px 2px 5px #fff
+
+.container
+  position: relative
+  max-width: 1200px
+  margin: 0 auto
+  .column-container 
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+
+/* COLUMN */
+.column 
+  order: 1
+  min-width: calc(33.3% - 30px)
+  background-color: rgba(125, 186, 217, 0.7)
+  box-shadow: 2px 2px 3px #000
+  border-radius: 10px
+  margin: 15px
+  list-style: none
+  position: relative
+  align-self: flex-start
+  .column-title
+    padding-left: 15px
+    margin-top: 30px
+
+.column-add-card 
+  cursor: pointer
+  text-decoration: none
+  display: inline
+  position: absolute
+  top: 0
+  right: 25px
+  width: 25px
+  height: 25px
+  background-color: rgba(65, 224, 131, 0.6)
+  border-style: none
+  color: #FFF
+  font-size: 20px
+  &:hover
+    background-color: rgba(11, 229, 73, 0.8)
+    box-shadow: 1px 1px 3px #fff
+
+/* STYLE KARTY */
+.card 
+  box-sizing: border-box
+  display: block
+  height: 60px
+  margin-bottom: 5px
+  padding: 4px
+  overflow: hidden
+  position: relative
+  .btn-delete
+    border-radius: 50%
+
+.card-list 
+  list-style: none
+  margin: 5px
+  padding: 0px
+
+.card-description 
+  margin: 2px 0
+  font-size: 20px
+  cursor: pointer
+
+.card-placeholder 
+  box-sizing: border-box
+  display: block
+  height: 60px
+  margin-bottom: 5px
+  border: 2px solid lightgrey
+  background-color: lightblue
+
