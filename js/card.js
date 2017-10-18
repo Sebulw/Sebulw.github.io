@@ -4,12 +4,11 @@ function Card(id, name) {
 	this.id = id;
 	this.name = name || 'Brak nazwy';
 	this.element = createCard();
-
 	function createCard() {
 		var card = $('<li class="card"></li>');
 		var cardDeleteBtn = $('<button class="btn-delete">x</button>');
 		var cardDescription = $('<p class="card-description"></p>');
-		
+
 		cardDeleteBtn.click(function(){
 			self.removeCard();
 		});

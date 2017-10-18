@@ -6,6 +6,7 @@ var baseUrl = 'https://kodilla.com/pl/bootcamp-api',
 $.ajaxSetup({
 	headers: myHeaders
 });
+
 $.ajax({
 	url: baseUrl + '/board',
 	method: 'GET',

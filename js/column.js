@@ -3,7 +3,6 @@ function Column(id, name) {
 	this.id = id;
 	this.name = name || 'No name given';
 	this.element = createColumn();
-
 	function createColumn() {
 		// TWORZENIE NOWYCH WĘZŁÓW
 		var column = $('<div class="column"></div>');
@@ -15,8 +14,7 @@ function Column(id, name) {
 		// PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
 		columnDelete.click(function() {
 			self.deleteColumn();
-		});
-		
+		});		
 		columnAddCard.click(function(event) {
 			var cardName = prompt('Enter the name of the card');
 			event.preventDefault();
@@ -32,8 +30,7 @@ function Column(id, name) {
 					self.createCard(card);
 				}
 			});
-		});
-			
+		});			
 			// KONSTRUOWANIE ELEMENTU KOLUMNY
 		column.append(columnTitle)
 			.append(columnDelete)
