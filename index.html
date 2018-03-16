@@ -1,31 +1,184 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Tablica kanban</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  	<div id="board" class="board">
-      <div class="header-container">
-  	    <h1>Tablica kanban</h1>
-  	    <button class="create-column">Dodaj kolumnę</button>
-      </div>
-        <div class="container">
-          <div class="column-container"></div>
-        </div> 
-  	</div>
-
-    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
-    <script   src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
-    <!--TO JEST JUŻ NIE POTRZEBNE-->
-    <!--<script type="text/javascript" src="script.js"></script>-->
-    
-    <!--TERAZ UŻYWAMY TEGO-->
-    <script type="text/javascript" src="Column.js"></script>
-    <script type="text/javascript" src="Card.js"></script>
-    <script type="text/javascript" src="Board.js"></script>
-    <script type="text/javascript" src="App.js"></script>
-</body>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Sebastian Wojnicz</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	</head>
+	<body>
+<!-- HEADER -->
+		<header>
+			<div class="container">
+				<div class="name">
+					<h3>Sebastian</h3>
+					<h3>Wojnicz</h3>
+				</div>
+				<div class="navigation">
+					<ul>
+						<!-- można nadać elementom listy hover na odcień niebieskiego + jakiś cień? -->
+						<li><a href="#about-me">O mnie</a></li>
+						<li><a href="#skills">Umiejętności</a></li>
+						<li><a href="#projects">Projekty</a></li>
+						<li><a href="#contact">Kontakt</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+<!-- HERO -->
+		<section class="hero" id="hero">
+			<div class="layer">
+				<div class="box">
+					<h1>Sebastian Wojnicz</h1>
+					<h3>Junior Front-End Developer</h3>
+				</div>
+				<img src="images/my-photo.jpg" alt="My Photo" height="250" width="250">
+				<!-- zdjęcie nachodzi na header/nawigację (naprawić) -->
+			</div>
+		</section>
+<!-- ABOUT ME -->
+		<section class="about-me" id="about-me">
+			<div class="container">
+				<h1>O mnie</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non ex in lectus imperdiet elementum at quis sapien. Morbi ut tempus felis, sit amet mattis enim. Suspendisse maximus, dui et gravida tincidunt, sem lectus maximus neque, vel mollis ante leo ullamcorper tortor. Quisque vel pharetra mauris. Praesent et leo dapibus, volutpat elit quis, accumsan risus.</p>
+			</div>
+		</section>
+<!-- SKILLS -->
+		<section class="skills" id="skills">
+			<!-- pełna szerokość dla tej sekcji -->
+			<!-- można spróbować obracania 3d dla każdej ikonki umiejętności -->
+			<div class="text">
+				<h1>Umiejętności</h1>
+				<p>Poniżej znajdują się technologie i frameworki którę znam.</p>
+			</div>
+				<!-- jeden div jedna umiejętność można użyć popover'a bootstrap -->
+				<!-- HTML5, CSS3, -BOOTSTRAP-, SASS, GIT, GITHUB, JS, JQUERY, -AJAX-, -API- + sprawdzić o czym zapomniałem -->
+			<div class="known">
+				<div class="html5 each-skill">
+					<img src="images/skill icons/html5.png" alt="HTML5">
+					<h4>HTML5</h4>
+				</div>
+				<div class="css3 each-skill">
+					<img src="images/skill icons/css3.png" alt="CSS3">
+					<h4>CSS3</h4>
+				</div>
+				<div class="rwd each-skill">
+					<img src="images/skill icons/rwd.png" alt="Responsive Web Design" height="100" width="100">
+					<h4>RWD</h4>
+				</div>
+				<div class="bootstrap each-skill">
+					<img src="images/skill icons/bootstrap.png" alt="Bootstrap" height="80" width="80">
+					<h4>Bootstrap</h4>
+				</div>
+				<div class="sass each-skill">
+					<img src="images/skill icons/sass.png" alt="Sass" height="80" width="80">
+					<h4>Sass</h4>
+				</div>
+				<div class="grunt each-skill">
+					<img src="images/skill icons/grunt.png" alt="Grunt" height="90" width="80">
+					<h4>Grunt</h4>
+				</div>
+				<div class="git each-skill">
+					<img src="images/skill icons/git.png" alt="Git">
+					<h4>Git</h4>
+				</div>
+				<div class="github each-skill">
+					<img src="images/skill icons/github.png" alt="GitHub" height="70" width="70">
+					<h4>GitHub</h4>
+				</div>
+				<div class="javascript each-skill">
+					<img src="images/skill icons/js.png" alt="JavaScript" height="90" width="90">
+					<h4>JavaScript</h4>
+				</div>
+				<div class="jquery each-skill">
+					<img src="images/skill icons/jq.png" alt="jQuery">
+					<h4>jQuery</h4>
+				</div>
+				<div class="ajax each-skill">
+					<img src="images/skill icons/ajax.png" alt="AJAX" height="70" width="140">
+					<h4>AJAX</h4>
+				</div>
+				<div class="api each-skill">
+					<img src="images/skill icons/API.jpg" alt="API" height="70" width="140">
+					<h4>API</h4>
+				</div>
+			</div>
+			<div class="to-learn">
+				<p>Technologie których się uczę lub w niedalekiej przyszłości zamierzam się uczyć</p>
+				<div class="react">
+					<img src="images/skill icons/react.png" alt="React">
+					<h4>React</h4>
+				</div>
+				<div class="node">
+					<img src="images/skill icons/node.png" alt="Node">
+					<h4>Node</h4>
+				</div>
+				<div class="wordpress">
+					<img src="images/skill icons/wordpress.png" alt="WordPress" height="70" width="70">
+					<h4>WordPress</h4>
+				</div>
+			</div>
+		</section>
+<!-- PROJECTS -->
+		<section class="projects" id="projects">
+			<div class="container">
+				<div class="projects-text">
+					<h1>Projekty</h1>
+					<p>Kilka moich przykładowych projektów z użyciem technologii które znam w wersji live oraz na Git Hubie</p>
+				</div>
+				<div class="each-item img1">
+					<div class="layer"></div>
+					<a href="https://github.com/Sebulw/zadanie_12_7"><i class="fab fa-github fa-3x"></i></a>
+					<a href="https://sebulw.github.io/zadanie_12_7/"><i class="fas fa-eye fa-3x"></i></a>
+					<!-- icony z linkiem do live i git hub'a -->
+				</div>
+				<div class="each-item img2">
+					<div class="layer"></div>
+					<a href="https://github.com/Sebulw/mache"><i class="fab fa-github fa-3x"></i></a>
+					<a href="https://sebulw.github.io/mache/"><i class="fas fa-eye fa-3x"></i></a>
+				</div>
+				<div class="each-item img3">
+					<div class="layer"></div>
+					<i class="fab fa-github fa-3x"></i>
+					<i class="fas fa-eye fa-3x"></i>
+				</div>
+				<div class="each-item img4">
+					<div class="layer"></div>
+					<i class="fab fa-github fa-3x"></i>
+					<i class="fas fa-eye fa-3x"></i>
+				</div>
+				<div class="each-item img5">
+					<div class="layer"></div>
+					<i class="fab fa-github fa-3x"></i>
+					<i class="fas fa-eye fa-3x"></i>
+				</div>
+				<div class="each-item img6">
+					<div class="layer"></div>
+					<i class="fab fa-github fa-3x"></i>
+					<i class="fas fa-eye fa-3x"></i>
+				</div>
+			</div>
+		</section>
+<!-- CONTACT -->
+		<section class="contact" id="contact">
+			<div class="container">
+				<div class="contact-text">
+					<h1>Kontakt</h1>
+					<p>Zainteresowane osoby zapraszam do kontaktu poprzez e-mail oraz na mój profil GitHub</p>
+				</div>
+				<div class="e-mail">
+					<h3>sebulw@gmail.com</h3>
+				</div>
+				<div class="github">
+					<a href="https://github.com/Sebulw" target="_blank"><i class="fab fa-github fa-7x"></i></a>
+				</div>
+				<!-- e-mail, facebook, linkedIN -->
+			</div>
+		</section>
+<!-- FOOTER -->
+		<footer>
+			<h3>Sebastian Wojnicz 2018 Copyright ©. All Rights Reserved.</h3>
+		</footer>
+	</body>
 </html>
